@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThreadSpace – Admin</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <div class="container">
+    <div class="admin-header">
+      <h1 class="admin-title">Admin Dashboard</h1>
+      <span class="admin-subtitle">Platform management</span>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value" id="statUsers">—</div>
+        <div class="stat-label">Total Users</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statPosts">—</div>
+        <div class="stat-label">Total Posts</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statTags">—</div>
+        <div class="stat-label">Total Tags</div>
+      </div>
+    </div>
+
+    <!-- Tag Management -->
+    <div class="admin-section">
+      <div class="admin-section-header">
+        <h2 class="admin-section-title">Tag Management</h2>
+      </div>
+
+      <!-- Create Tag -->
+      <div class="tag-create-form">
+        <input type="text" id="newTagInput" class="tag-create-input" placeholder="New tag name..." maxlength="30" />
+        <button id="createTagBtn" class="btn btn-primary">Create Tag</button>
+      </div>
+      <div id="tagCreateError" class="error-msg"></div>
+      <div id="tagCreateSuccess" class="success-msg"></div>
+
+      <!-- Tags List -->
+      <div id="tagsList" class="tags-admin-list">
+        <div class="loading">Loading tags...</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="dist/api.js"></script>
+  <script src="dist/admin.js"></script>
+</body>
+</html>

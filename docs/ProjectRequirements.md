@@ -113,6 +113,7 @@ Phase 1 Features
     - Entity Framework Core ORM
     - PostgreSQL Database
     - Docker containerized environment
+    -Frontend Razor pages 
 
 
 phase 2
