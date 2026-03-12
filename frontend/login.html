@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThreadSpace – Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <div class="container">
+    <div class="form-card">
+      <h2 class="form-title">&lt;ThreadSpace&gt;</h2>
+      <p style="text-align:center;color:var(--text-muted);margin-bottom:24px;font-size:13px">Sign in to your account</p>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Your password" required />
+        </div>
+        <div id="errorMsg" class="error-msg"></div>
+        <button type="submit" class="btn btn-primary form-submit">Sign In</button>
+      </form>
+
+      <p class="form-footer">
+        Don't have an account? <a href="register.html">Register</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="dist/api.js"></script>
+  <script src="dist/login.js"></script>
+</body>
+</html>

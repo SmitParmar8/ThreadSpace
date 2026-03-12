@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThreadSpace – Developer Feed</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <div class="container">
+
+    <!-- Tab Bar -->
+    <div class="feed-tabs">
+      <button class="feed-tab active" data-tab="feed">Feed</button>
+      <button class="feed-tab" data-tab="ai">AI Posts</button>
+      <div class="feed-tab-actions">
+        <a id="newPostBtn" href="create-post.html" class="btn btn-primary hidden">+ New Post</a>
+      </div>
+    </div>
+
+    <!-- Feed Tab -->
+    <div id="tabFeed" class="tab-panel">
+      <div class="section-header">
+        <span id="postCount" class="section-count"></span>
+      </div>
+      <div id="tagFilters" class="tag-filters"></div>
+      <div id="postsList">
+        <div class="loading">Loading posts...</div>
+      </div>
+    </div>
+
+    <!-- AI Posts Tab -->
+    <div id="tabAi" class="tab-panel hidden">
+      <div class="section-header">
+        <h2 class="section-title">AI Posts</h2>
+        <span class="section-count">Curated AI-generated insights</span>
+      </div>
+      <div id="aiPostsList" class="ai-posts-grid">
+        <div class="loading">Loading...</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Edit Post Modal -->
+  <div id="editModal" class="modal hidden">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Edit Post</h3>
+        <button id="closeModal" class="modal-close">&times;</button>
+      </div>
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" id="editTitle" maxlength="100" />
+      </div>
+      <div class="form-group">
+        <label>Content</label>
+        <textarea id="editContent"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Tag</label>
+        <select id="editTag"></select>
+      </div>
+      <div id="editError" class="error-msg"></div>
+      <button id="saveEditBtn" class="btn btn-primary" style="width:100%;margin-top:8px">Save Changes</button>
+    </div>
+  </div>
+
+  <script src="dist/api.js"></script>
+  <script src="dist/feed.js"></script>
+</body>
+</html>
